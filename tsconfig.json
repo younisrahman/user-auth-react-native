@@ -2,10 +2,14 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "jsx": "react-native",                // ✅ Fixes JSX/TSX compilation
+    "allowJs": true,                       // Allow plain JS files if needed
+    "esModuleInterop": true,               // Better import compatibility
+    "skipLibCheck": true,                  // Speed up type checking
+    "moduleResolution": "node",
+    "resolveJsonModule": true,             // Enable importing .json files
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [
